@@ -15,8 +15,6 @@ print "Looking for links..."
 #I created this for
 pdfLinks = re.findall('[E].*\.pdf', html)
 
-print "Links: ", pdfLinks
-
 savePath = raw_input("Please enter your save path: ")
 
 print "Attempting to download links now..."
