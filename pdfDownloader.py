@@ -18,9 +18,12 @@ pdfLinks = re.findall('[E].*\.pdf', html)
 savePath = raw_input("Please enter your save path: ")
 
 print "Attempting to download links now..."
+urlPath = webpageName[:-5] + "s/"
 count = 1
+
 for i in pdfLinks:
-    urllib.urlretrieve(webpageName+i, savePath+ "/" + i)
+    print urlPath + i
+    urllib.urlretrieve(urlPath + i, savePath+ "/" + i)
     count+=1
 
 print "Finished downloading links..."
